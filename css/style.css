@@ -14,13 +14,18 @@ body {
 
 nav {
   background-color: #000;
-  height: 100px;
   text-transform: uppercase;
+  padding: 0;
 }
 
 nav .navbar-brand {
   color: #b88b58;
   font-weight: 700;
+  margin: 0;
+}
+
+nav .toggle-nav {
+  display: none;
 }
 
 nav .navbar-nav {
@@ -32,18 +37,19 @@ nav .navbar-nav {
 
 nav li {
   padding: 10px;
+  list-style: none;
 }
 
-nav a {
-  color: #fff;
+nav .list-word {
+  color: white;
   font-weight: 700;
   font-size: 14px;
 }
 
-nav a:hover {
+nav .list-word:hover {
   color: #fff;
   text-decoration: none;
-  padding-bottom: 36px;
+  padding-bottom: 15px;
   border-bottom: 5px solid #b88b58;
   transition: border-bottom 0.3s ease-out;
 }
@@ -110,7 +116,7 @@ nav a:hover {
   border: none;
   position: absolute;
   right: 30px;
-  bottom: -16%;
+  bottom: -80px;
   cursor: pointer;
   animation: pulse 2s infinite;
 }
@@ -247,13 +253,13 @@ nav a:hover {
   padding: 0;
 }
 
-.projcets {
+.projects {
   text-align: center;
   margin: 50px 0;
   text-transform: uppercase;
 }
 
-.projcets h2 {
+.projects h2 {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -261,7 +267,7 @@ nav a:hover {
   color: #000;
 }
 
-.projcets p {
+.projects p {
   font-size: 14px;
   color: #aeaeae;
   font-weight: 600;
@@ -269,7 +275,7 @@ nav a:hover {
   padding-bottom: 20px;
 }
 
-.projcets .navbar-nav {
+.projects .navbar-nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -286,27 +292,27 @@ nav a:hover {
   width: 60%;
 }
 
-.projcets img {
+.projects img {
   padding-bottom: 40px;
   cursor: pointer;
 }
 
-.projcets img:hover {
+.projects img:hover {
   opacity: 0.7;
 }
 
-.projcets a {
+.projects a {
   text-decoration: none;
   padding: 10px;
   color: #000;
 }
 
-.projcets a:hover {
+.projects a:hover {
   padding-bottom: 15px;
   border-bottom: 5px solid #b88b58;
 }
 
-.projcets .btn-3 {
+.projects .btn-3 {
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -318,12 +324,12 @@ nav a:hover {
   cursor: pointer;
 }
 
-.projcets .btn-3:hover {
+.projects .btn-3:hover {
   transform: scale(1.15);
   transition: transform 0.5s ease-in-out;
 }
 
-.projcets .btn-3:focus {
+.projects .btn-3:focus {
   outline: none;
 }
 
@@ -836,7 +842,14 @@ nav a:hover {
   padding-left: 20px;
 }
 
-.adress .btn-back {
+footer {
+  background-color: #000;
+  padding: 30px 0;
+  position: relative;
+}
+
+footer .btn-back {
+  color: #fff;
   width: 65px;
   height: 65px;
   border-radius: 100%;
@@ -844,23 +857,17 @@ nav a:hover {
   border: none;
   position: absolute;
   left: 30px;
-  bottom: -7%;
+  bottom: 88%;
   cursor: pointer;
 }
 
-.adress .btn-back:focus {
+footer .btn-back:focus {
   outline: 0;
 }
 
-.adress .fa-angle-up {
+footer .fa-angle-up {
   background-color: #b88b58;
   font-size: 35px;
-}
-
-footer {
-  background-color: #000;
-  padding: 30px 0;
-  position: relative;
 }
 
 footer .footer-icons i {
@@ -978,6 +985,45 @@ footer .footer-form form .btn-subscribe:active {
 }
 
 @media (max-width: 1220px) {
+  .navbar {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  .navbar .navigation {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .navbar .navigation .navbar-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .navbar .navigation .toggle-nav {
+    display: block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background-color: #b88b58;
+    border: none;
+    border-radius: 25%;
+    outline: none;
+  }
+  .navbar .navigation .navbar-nav {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    display: none;
+  }
+  .navbar .navigation .active {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
   .services p:nth-child(3) {
     margin-right: 10px;
     margin-left: 10px;
@@ -1047,6 +1093,9 @@ footer .footer-form form .btn-subscribe:active {
   .contact {
     width: 80%;
   }
+  footer .btn-back {
+    display: none;
+  }
   footer .one {
     -ms-flex-order: 3;
         order: 3;
@@ -1102,6 +1151,9 @@ footer .footer-form form .btn-subscribe:active {
   .main h1 {
     font-size: 45px;
   }
+  .main .btn-call {
+    display: none;
+  }
   .about p {
     text-align: center;
   }
@@ -1109,7 +1161,7 @@ footer .footer-form form .btn-subscribe:active {
     width: 80%;
   }
   .adress .contact-details {
-    width: 100%;
+    width: 70%;
   }
   footer {
     text-align: center;
@@ -1123,6 +1175,70 @@ footer .footer-form form .btn-subscribe:active {
   }
   footer .one span {
     top: 75px;
+  }
+}
+
+@media (max-width: 530px) {
+  .main h1 {
+    font-size: 26px;
+  }
+  .main p {
+    font-size: 20px;
+  }
+  .about iframe {
+    display: none;
+  }
+  .projects .nav {
+    display: none;
+  }
+  .team .box {
+    background: none;
+  }
+  .team h3 {
+    color: white;
+  }
+  .team p:nth-child(3) {
+    color: white;
+  }
+  .premium img {
+    display: none;
+  }
+  .adress .contact-details {
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer p {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .clients p:nth-child(7) {
+    width: 90%;
+  }
+  .contact {
+    width: 100%;
+  }
+  .contact form button.btn-5 {
+    width: 150px;
+  }
+  .adress .contact-details {
+    padding: 0;
+    background: none;
+  }
+  .adress .contact-details i {
+    background-color: #000;
+  }
+  .adress .contact-details span {
+    color: #000;
+    font-weight: 600;
+    padding-left: 5px;
+  }
+  footer .one span {
+    top: 120px;
+  }
+  footer .footer-form {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

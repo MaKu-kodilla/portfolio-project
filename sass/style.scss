@@ -46,11 +46,15 @@ body {
 }
 nav {
     background-color: #000;
-    height: 100px;
     text-transform: uppercase;
+    padding: 0;
     .navbar-brand {
         color: #b88b58;
         font-weight: 700;
+        margin: 0;
+    }
+    .toggle-nav {
+        display: none;
     }
     .navbar-nav {
         display: flex;
@@ -58,15 +62,16 @@ nav {
     }
     li {
         padding: 10px;
+        list-style: none;
     }
-    a {
-        color: #fff;
+    .list-word {
+        color: white;
         font-weight: 700;
         font-size: 14px;
         &:hover {
             color: #fff;
             text-decoration: none;
-            padding-bottom: 36px;
+            padding-bottom: 15px;
             border-bottom: 5px solid #b88b58;
             transition: border-bottom 0.3s ease-out;
         }
@@ -111,7 +116,7 @@ nav {
         border: none;
         position: absolute;
         right: 30px;
-        bottom: -16%;
+        bottom: -80px;
         cursor: pointer;
         animation: pulse 2s infinite;
         &:focus {
@@ -206,7 +211,7 @@ nav {
         padding: 0;
     }
 }
-.projcets {
+.projects {
     text-align: center;
     margin: 50px 0;
     text-transform: uppercase;
@@ -598,7 +603,13 @@ nav {
         line-height: 24px;
         padding-left: 20px;
     }
+}
+footer {
+    background-color: #000;
+    padding: 30px 0;
+    position: relative;
     .btn-back {
+        color: #fff;
         width: 65px;
         height: 65px;
         border-radius: 100%;
@@ -606,7 +617,7 @@ nav {
         border: none;
         position: absolute;
         left: 30px;
-        bottom: -7%;
+        bottom: 88%;
         cursor: pointer;
         &:focus {
             outline: 0;
@@ -616,11 +627,6 @@ nav {
         background-color: #b88b58;
         font-size: 35px;
     }
-}
-footer {
-    background-color: #000;
-    padding: 30px 0;
-    position: relative;
     .footer-icons {
         i {
             width: 35px;
@@ -697,6 +703,39 @@ footer {
     }
 }
 @media (max-width: 1220px) {
+    .navbar {
+        padding-bottom: 0;
+        padding-top: 20px;
+        .navigation {
+            flex-direction: column;
+            .navbar-header {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-bottom: 10px;
+            }
+            .toggle-nav {
+                display: block;
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                background-color: #b88b58;
+                border: none;
+                border-radius: 25%;
+                outline: none;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+            .active {
+                display: flex;
+                width: 100vw;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
     .services {
         p:nth-child(3) {
             margin-right: 10px;
@@ -778,6 +817,9 @@ footer {
         width: 80%;
     }
     footer {
+        .btn-back {
+            display: none;
+        }
         .one {
             order: 3;
             margin-bottom: 30px;
@@ -829,10 +871,12 @@ footer {
             justify-content: center;
         }
     }
-    
     .main {
         h1 {
             font-size: 45px;
+        }
+        .btn-call {
+            display: none;
         }
     }
     .about {
@@ -847,7 +891,7 @@ footer {
     }
     .adress {
         .contact-details {
-            width: 100%;
+            width: 70%;
         }
     }
     footer {
@@ -868,6 +912,98 @@ footer {
         }
     }
 }
+@media (max-width: 530px) {
+    .main {
+        h1 {
+            font-size: 26px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .about {
+        iframe {
+            display: none;
+        }
+    }
+    .projects {
+        .nav {
+            display: none;
+        }
+    }
+    .team {
+        .box {
+            background: none;
+        }
+        h3 {
+            color: white;
+        }
+        p {
+            &:nth-child(3) {
+                color: white;
+            }
+        }
+    }
+    .premium {
+        img {
+            display: none;
+        }
+    }
+    .adress {
+        .contact-details {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    footer {
+        p {
+            display: none;
+        }
+    }
+}
+@media (min-width: 320px ) and (max-width: 450px) {
+    .clients {
+        p {
+            &:nth-child(7) {
+                width: 90%;
+            }
+        }
+    }
+    .contact {
+        width: 100%;
+        form {
+            button.btn-5 {
+            width: 150px;
+            }
+        }
+    }
+    .adress {
+        .contact-details {
+            padding: 0;
+            background: none;
+            i {
+                background-color: #000;
+            }
+            span {
+                color: #000;
+                font-weight: 600;
+                padding-left: 5px;
+            }
+        }
+    }
+    footer {
+        .one {
+            span {
+                top: 120px;
+            }
+        }
+        .footer-form {
+               display: none;
+            }
+        }
+    }
+
+
 
 
 
