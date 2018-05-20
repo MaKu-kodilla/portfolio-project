@@ -89,7 +89,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
 }
@@ -176,7 +176,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
 }
@@ -191,7 +191,7 @@ nav .list-word:hover {
 }
 
 .about iframe {
-  box-shadow: 3px 3px 3px 3px;
+  box-shadow: 2px 2px;
 }
 
 .services {
@@ -319,7 +319,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
 }
@@ -612,7 +612,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
   margin-top: 50px;
@@ -794,7 +794,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
 }
@@ -820,7 +820,12 @@ nav .list-word:hover {
   padding: 50px;
 }
 
-.adress i {
+.adress p {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.adress p i {
   width: 35px;
   height: 35px;
   background-color: #aeaeae;
@@ -834,12 +839,12 @@ nav .list-word:hover {
       align-items: center;
 }
 
-.adress span {
+.adress p span {
   font-size: 12px;
   font-weight: 300;
   color: #7e7e7e;
   line-height: 24px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 footer {
@@ -960,7 +965,7 @@ footer .footer-form form .btn-subscribe {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 20%;
+  border-radius: 35%;
   border: none;
   cursor: pointer;
   margin-top: 40px;
@@ -1148,6 +1153,10 @@ footer .footer-form form .btn-subscribe:active {
     -ms-flex-pack: center;
         justify-content: center;
   }
+  .main {
+    height: 100vh;
+    min-height: 300px;
+  }
   .main h1 {
     font-size: 45px;
   }
@@ -1213,6 +1222,9 @@ footer .footer-form form .btn-subscribe:active {
 }
 
 @media (min-width: 320px) and (max-width: 450px) {
+  .projects .container .row .col-xs-12 {
+    padding: 0;
+  }
   .clients p:nth-child(7) {
     width: 90%;
   }
