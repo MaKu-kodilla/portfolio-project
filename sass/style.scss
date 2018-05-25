@@ -10,7 +10,7 @@ $basic-font: 'Montserrat', sans-serif;
     background-color: #b88b58;
     width: 195px;
     height: 45px;
-    border-radius: 35%;
+    border-radius: 25px;
     border: none;
     cursor: pointer;
     &:hover {
@@ -267,7 +267,7 @@ nav {
         background-color: #fff;
         text-align: center;
         margin: 0 auto;
-        border-radius: 5%;
+        border-radius: 50px;
     }
     h2 {
         color: #fff;
@@ -589,7 +589,7 @@ nav {
     p {
         display: flex;
         i {
-            width: 35px;
+            min-width: 35px;
             height: 35px;
             background-color: #aeaeae;
             border-radius: 100%;
@@ -745,6 +745,9 @@ footer {
             margin-left: 10px;
         }
     }
+    .adress {
+        background-position: 65%;
+    }
 }
 @media (max-width: 1195px) {
     .team {
@@ -753,6 +756,13 @@ footer {
                 display: flex;
                 flex-wrap: wrap;
             }
+        }
+    }
+}
+@media (min-width: 992px ) and (max-width: 1290px) {
+    .projects {
+        img {
+            width: 100%;
         }
     }
 }
@@ -849,6 +859,7 @@ footer {
         }
     }
     .adress {
+        background-position: 55%;
         .contact-details {
             width: 150%;
         }
@@ -865,7 +876,7 @@ footer {
         padding: 10px;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     nav {
         text-align: center;
         .navbar-nav {
@@ -895,6 +906,7 @@ footer {
         }
     }
     .adress {
+        background-position: 62%;
         .contact-details {
             width: 70%;
         }

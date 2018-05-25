@@ -89,7 +89,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
 }
@@ -176,7 +176,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
 }
@@ -319,7 +319,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
 }
@@ -344,7 +344,7 @@ nav .list-word:hover {
   background-color: #fff;
   text-align: center;
   margin: 0 auto;
-  border-radius: 5%;
+  border-radius: 50px;
 }
 
 .team h2 {
@@ -612,7 +612,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
   margin-top: 50px;
@@ -794,7 +794,7 @@ nav .list-word:hover {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
 }
@@ -826,7 +826,7 @@ nav .list-word:hover {
 }
 
 .adress p i {
-  width: 35px;
+  min-width: 35px;
   height: 35px;
   background-color: #aeaeae;
   border-radius: 100%;
@@ -965,7 +965,7 @@ footer .footer-form form .btn-subscribe {
   background-color: #b88b58;
   width: 195px;
   height: 45px;
-  border-radius: 35%;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
   margin-top: 40px;
@@ -1033,6 +1033,9 @@ footer .footer-form form .btn-subscribe:active {
     margin-right: 10px;
     margin-left: 10px;
   }
+  .adress {
+    background-position: 65%;
+  }
 }
 
 @media (max-width: 1195px) {
@@ -1041,6 +1044,12 @@ footer .footer-form form .btn-subscribe:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1290px) {
+  .projects img {
+    width: 100%;
   }
 }
 
@@ -1127,6 +1136,9 @@ footer .footer-form form .btn-subscribe:active {
   .main h1 {
     font-size: 60px;
   }
+  .adress {
+    background-position: 55%;
+  }
   .adress .contact-details {
     width: 150%;
   }
@@ -1141,7 +1153,7 @@ footer .footer-form form .btn-subscribe:active {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   nav {
     text-align: center;
   }
@@ -1168,6 +1180,9 @@ footer .footer-form form .btn-subscribe:active {
   }
   .team .box {
     width: 80%;
+  }
+  .adress {
+    background-position: 62%;
   }
   .adress .contact-details {
     width: 70%;
