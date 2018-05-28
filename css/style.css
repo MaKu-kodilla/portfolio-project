@@ -540,7 +540,7 @@ nav .list-word:hover {
   width: 130px;
   height: 45px;
   text-transform: uppercase;
-  border-radius: 20%;
+  border-radius: 30px;
   border: none;
   font-size: 12px;
   font-weight: 700;
